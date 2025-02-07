@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
 }
 
+apply plugin: 'dagger.hilt.android.plugin'
+
 android {
     namespace 'com.example.sorapods2'
     compileSdk 34
@@ -40,6 +42,12 @@ dependencies {
     implementation libs.lifecycle.viewmodel.ktx
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    implementation libs.room.runtime
+    implementation libs.hilt
+    compileOnly libs.lombok
+    annotationProcessor libs.room.compiler
+    annotationProcessor libs.hilt.compiler
+    annotationProcessor libs.lombok
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
