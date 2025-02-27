@@ -3,8 +3,10 @@ package com.example.sorapods2.database.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+@Entity(tableName = "episodes")
 public class Episode {
     @PrimaryKey(autoGenerate = true)
     public Integer id;
@@ -27,4 +29,3 @@ public class Episode {
     @ColumnInfo(name = "playback_time")
     public String playbackTime;
 }
-
